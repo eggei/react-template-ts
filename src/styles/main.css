@@ -1,0 +1,60 @@
+@import './normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+:root {
+  --yellow: #f5b81e;
+  --parliament: #102540;
+  --blue: #075d9a;
+  --seablue: #76defb;
+  --skyblue: #52a8e1;
+  --black: #1b1b1b;
+}
+
+#root {
+  align-items: center;
+  background-color: whitesmoke;
+  color: var(--black);
+  display: flex;
+  font-family: 'Rubik', sans-serif;
+  height: 100vh;
+  justify-content: center;
+  text-align: center;
+  width: 100vw;
+}
+
+.wrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.text {
+  line-height: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.animated-circle {
+  animation: breathe 3s ease-in-out infinite;
+  animation-direction: alternate;
+  background-color: var(--yellow);
+  border-radius: 100%;
+  height: 20px;
+  position: relative;
+  top: 48px;
+  width: 20px;
+}
+
+@keyframes breathe {
+  from {
+    opacity: 0;
+    transform: scale(1);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(14);
+  }
+}
